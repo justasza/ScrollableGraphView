@@ -186,6 +186,7 @@ open class Plot {
             let value = data[dataPosition]
             
             let newPosition = graphViewDrawingDelegate.calculatePosition(atIndex: activatedPointIndex, value: value)
+            guard activatedPointIndex < graphPoints.count else { return }
             graphPoints[activatedPointIndex].x = newPosition.x
             graphPoints[activatedPointIndex].y = newPosition.y
             
